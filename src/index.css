@@ -19,7 +19,7 @@ html, body {
 }
 
 body {
-  background: url('/my-portfolio/public/background.jpg') no-repeat center center fixed;
+  background: url('./public/background.jpg') no-repeat center center fixed;
   background-size: cover;
   background-attachment: fixed;
 }
