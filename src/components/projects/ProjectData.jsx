@@ -7,8 +7,8 @@ const projects = [
         en: "TridenteGym",
       },
       description: {
-        es: "Aplicación de gimnasio que tiene CRUD de actividades y usuarios. Hay 3 tipos de roles: dueño: tridentegym@tridentegym.com Contraseña: trident - Profesor: profe@profe.com contraseña: profe - Cliente: user@user.com contraseña: user",
-        en: "Gym app that has CRUD of activities and users. There are 3 types of roles: owner: tridentegym@tridentegym.com Pass: trident - Professor: profe@profe.com pass: profe - Client: user@user.com pass: user",
+        es: "Aplicación de gimnasio que tiene CRUD de actividades y usuarios. Hay 3 tipos de roles: dueño: tridente@tridente.com Contraseña: tridente - Profesor: profe@profe.com contraseña: profe - Cliente: user@user.com contraseña: user",
+        en: "Gym app that has CRUD of activities and users. There are 3 types of roles: owner: tridente@tridente.com Pass: tridente - Professor: profe@profe.com pass: profe - Client: user@user.com pass: user",
       },
       link: "https://tridente-gym-web.vercel.app/",
     },
