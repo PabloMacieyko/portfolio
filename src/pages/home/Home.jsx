@@ -36,7 +36,7 @@ const Home = () => {
       />
       <main
         className="p-8 min-h-screen bg-cover bg-center flex flex-col items-center"
-        style={{ backgroundImage: "url('./src/assets/background.jpg')" }}
+        style={{ backgroundImage: "url('/public/background.jpg')" }}
       >
         <div
           className={`${
