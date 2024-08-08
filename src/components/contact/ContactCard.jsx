@@ -1,9 +1,12 @@
 import React, { useState } from "react";
 import emailjs from "emailjs-com";
+import translations from "../translations/translations";
 
 const ContactCard = ({ language, darkMode }) => {
   const [form, setForm] = useState({ name: "", email: "", message: "" });
   const [status, setStatus] = useState("");
+
+  const t = translations[language];
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -14,7 +17,7 @@ const ContactCard = ({ language, darkMode }) => {
     e.preventDefault();
 
     if (!form.name || !form.email || !form.message) {
-      setStatus("All fields are required.");
+      setStatus(t.requiredFields);
       return;
     }
 
@@ -27,55 +30,31 @@ const ContactCard = ({ language, darkMode }) => {
       );
 
       if (result.text === "OK") {
-        setStatus("Message sent successfully!");
+        setStatus(t.success);
         setForm({ name: "", email: "", message: "" });
       } else {
-        setStatus("Failed to send message.");
+        setStatus(statusMessages[language].failure);
       }
     } catch (error) {
       console.error("Error sending email:", error);
-      setStatus("An error occurred.");
+      setStatus(t.error);
     }
   };
 
-  const contactText = {
-    es: "Contáctame",
-    en: "Contact Me",
-  };
-
-  const nameLabel = {
-    es: "Nombre",
-    en: "Name",
-  };
-
-  const emailLabel = {
-    es: "Correo Electrónico",
-    en: "Email",
-  };
-
-  const messageLabel = {
-    es: "Mensaje",
-    en: "Message",
-  };
-
-  const sendButtonText = {
-    es: "Enviar",
-    en: "Send",
-  };
 
   return (
     <div
       className={`${
-        darkMode ? "bg-gray-800 bg-opacity-90" : "bg-gray-100 bg-opacity-80"
+        darkMode ? "bg-gray-800 bg-opacity-30" : "bg-gray-100 bg-opacity-30"
       } p-6 rounded-lg w-full max-w-4xl`}
     >
       <h3 className="text-2xl font-bold mb-4 text-center">
-        {contactText[language]}
+        {t.contactText}
       </h3>
       <form onSubmit={handleSubmit}>
         <div className="mb-4">
           <label className="block text-sm font-medium mb-2" htmlFor="name">
-            {nameLabel[language]}
+            {t.nameLabel}
           </label>
           <input
             type="text"
@@ -84,13 +63,13 @@ const ContactCard = ({ language, darkMode }) => {
             value={form.name}
             onChange={handleChange}
             className={`border p-2 w-full rounded-md ${
-              darkMode ? "bg-gray-700 text-white" : "bg-white text-black"
+              darkMode ? "bg-gray-700 text-white bg-opacity-10" : "bg-white text-black bg-opacity-10"
             }`}
           />
         </div>
         <div className="mb-4">
           <label className="block text-sm font-medium mb-2" htmlFor="email">
-            {emailLabel[language]}
+            {t.emailLabel}
           </label>
           <input
             type="email"
@@ -99,13 +78,13 @@ const ContactCard = ({ language, darkMode }) => {
             value={form.email}
             onChange={handleChange}
             className={`border p-2 w-full rounded-md ${
-              darkMode ? "bg-gray-700 text-white" : "bg-white text-black"
+              darkMode ? "bg-gray-700 text-white bg-opacity-10" : "bg-white text-black bg-opacity-10"
             }`}
           />
         </div>
         <div className="mb-4">
           <label className="block text-sm font-medium mb-2" htmlFor="message">
-            {messageLabel[language]}
+            {t.messageLabel}
           </label>
           <textarea
             id="message"
@@ -113,16 +92,16 @@ const ContactCard = ({ language, darkMode }) => {
             value={form.message}
             onChange={handleChange}
             className={`border p-2 w-full rounded-md ${
-              darkMode ? "bg-gray-700 text-white" : "bg-white text-black"
+              darkMode ? "bg-gray-700 text-white bg-opacity-10" : "bg-white text-black bg-opacity-10"
             }`}
             rows="4"
           />
         </div>
         <button
           type="submit"
-          className="bg-blue-500 text-white py-2 px-4 rounded-md hover:bg-blue-600 w-full"
+          className="bg-blue-500 text-white py-2 px-4 rounded-md hover:bg-blue-600 w-full bg-opacity-30"
         >
-          {sendButtonText[language]}
+          {t.sendButtonText}
         </button>
       </form>
       {status && <p className="mt-4 text-sm text-center">{status}</p>}

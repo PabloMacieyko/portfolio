@@ -15,8 +15,8 @@ const Skill = ({ t, darkMode }) => {
   return (
     <div
       className={`${
-        darkMode ? "bg-gray-800 bg-opacity-90" : "bg-gray-100 bg-opacity-80"
-      } flex flex-col items-center justify-center p-8 border mb-8 w-full max-w-4xl text-center rounded-lg`}
+        darkMode ? "bg-gray-800 bg-opacity-40" : "bg-gray-100 bg-opacity-40"
+      } flex flex-col items-center justify-center p-8 mb-8 w-full max-w-4xl text-center rounded-lg`}
     >
       <h2 className="text-3xl font-bold mb-8">{t.skillsTitle}</h2>
 
@@ -27,42 +27,42 @@ const Skill = ({ t, darkMode }) => {
           <div className="flex flex-col items-center">
             <FaReact
               size={50}
-              className="transition-transform duration-300 transform hover:scale-125 hover:text-blue-400"
+              className="transition-transform duration-300 transform hover:scale-150 hover:text-blue-400"
             />
             <p className="mt-2">React</p>
           </div>
           <div className="flex flex-col items-center">
             <SiJavascript
               size={50}
-              className="transition-transform duration-300 transform hover:scale-125 hover:text-yellow-300"
+              className="transition-transform duration-300 transform hover:scale-150 hover:text-yellow-300"
             />
             <p className="mt-2">JavaScript</p>
           </div>
           <div className="flex flex-col items-center">
             <SiBootstrap
               size={50}
-              className="transition-transform duration-300 transform hover:scale-125 hover:text-purple-500"
+              className="transition-transform duration-300 transform hover:scale-150 hover:text-purple-500"
             />
             <p className="mt-2">Bootstrap</p>
           </div>
           <div className="flex flex-col items-center">
             <SiHtml5
               size={50}
-              className="transition-transform duration-300 transform hover:scale-125 hover:text-orange-500"
+              className="transition-transform duration-300 transform hover:scale-150 hover:text-orange-500"
             />
             <p className="mt-2">HTML</p>
           </div>
           <div className="flex flex-col items-center">
             <SiCss3
               size={50}
-              className="transition-transform duration-300 transform hover:scale-125 hover:text-blue-500"
+              className="transition-transform duration-300 transform hover:scale-150 hover:text-blue-500"
             />
             <p className="mt-2">CSS</p>
           </div>
           <div className="flex flex-col items-center">
             <SiTailwindcss
               size={50}
-              className="transition-transform duration-300 transform hover:scale-125 hover:text-sky-500"
+              className="transition-transform duration-300 transform hover:scale-150 hover:text-sky-500"
             />
             <p className="mt-2">Tailwind</p>
           </div>
@@ -76,21 +76,21 @@ const Skill = ({ t, darkMode }) => {
           <div className="flex flex-col items-center">
             <SiDotnet
               size={50}
-              className="transition-transform duration-300 transform hover:scale-125 hover:text-purple-500"
+              className="transition-transform duration-300 transform hover:scale-150 hover:text-purple-500"
             />
             <p className="mt-2">.NET</p>
           </div>
           <div className="flex flex-col items-center">
             <SiMongodb
               size={50}
-              className="transition-transform duration-300 transform hover:scale-125 hover:text-green-500"
+              className="transition-transform duration-300 transform hover:scale-150 hover:text-green-500"
             />
             <p className="mt-2">MongoDB</p>
           </div>
           <div className="flex flex-col items-center">
             <SiFirebase
               size={50}
-              className="transition-transform duration-300 transform hover:scale-125 hover:text-yellow-500"
+              className="transition-transform duration-300 transform hover:scale-150 hover:text-yellow-500"
             />
             <p className="mt-2">Firebase</p>
           </div>
