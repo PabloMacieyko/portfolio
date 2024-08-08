@@ -13,6 +13,7 @@ const translations = {
       messageLabel: "Mensaje",
       sendButtonText: "Enviar",
       projectsTitle: "Proyectos",
+      skillsTitle: "Habilidades",
     },
     en: {
       titlePortfolio: "Welcome to My Portfolio",
@@ -28,6 +29,7 @@ const translations = {
       messageLabel: "Message",
       sendButtonText: "Send",
       projectsTitle: "Projects",
+      skillsTitle: "Skills",
     },
   };
   
