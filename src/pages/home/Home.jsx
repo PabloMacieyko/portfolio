@@ -21,20 +21,19 @@ const Home = () => {
   const t = translations[language];
 
   return (
-    <div
-      className={`${
-        darkMode ? "text-white" : "text-black"
-      } min-h-screen flex flex-col`}
-    >
+    <div className={`${darkMode ? "text-white" : "text-black"}`}>
       <Header
         toggleLanguage={toggleLanguage}
         toggleDarkMode={toggleDarkMode}
         language={language}
         darkMode={darkMode}
       />
-      <Body t={t} language={language} darkMode={darkMode} />
-      <Skill t={t} darkMode={darkMode} />
-      <ContactCard language={language} darkMode={darkMode} />
+      <div className="flex flex-col items-center justify-center min-h-screen p-8">
+        <Body t={t} language={language} darkMode={darkMode} />
+        <Skill t={t} darkMode={darkMode} />
+        <ContactCard language={language} darkMode={darkMode} />
+      </div>
+
       <Footer darkMode={darkMode} />
     </div>
   );

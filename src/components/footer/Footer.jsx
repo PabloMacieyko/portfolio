@@ -11,10 +11,11 @@ import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 const Footer = ({ darkMode }) => {
   return (
     <footer
+      id="contact"
       className={`items-center p-4 mt-8 ${
         darkMode
-          ? "bg-gray-800 text-white bg-opacity-80"
-          : "bg-gray-300 bg-opacity-80 text-black"
+          ? "bg-gray-800 text-white bg-opacity-30"
+          : "bg-gray-300 bg-opacity-30 text-black"
       }`}
     >
       <div className="flex justify-center space-x-4 mb-4">
@@ -25,7 +26,8 @@ const Footer = ({ darkMode }) => {
         >
           <FontAwesomeIcon
             icon={faInstagram}
-            className="text-2xl hover:text-gray-400"
+            size="2x"
+            className="transition-transform duration-300 transform hover:scale-150 hover:text-gray-400"
           />
         </a>
         <a
@@ -35,7 +37,8 @@ const Footer = ({ darkMode }) => {
         >
           <FontAwesomeIcon
             icon={faWhatsapp}
-            className="text-2xl hover:text-gray-400"
+            size="2x"
+            className="transition-transform duration-300 transform hover:scale-150 hover:text-gray-400"
           />
         </a>
         <a
@@ -45,7 +48,8 @@ const Footer = ({ darkMode }) => {
         >
           <FontAwesomeIcon
             icon={faEnvelope}
-            className="text-2xl hover:text-gray-400"
+            size="2x"
+            className="transition-transform duration-300 transform hover:scale-150 hover:text-gray-400"
           />
         </a>
         <a
@@ -55,7 +59,8 @@ const Footer = ({ darkMode }) => {
         >
           <FontAwesomeIcon
             icon={faGithub}
-            className="text-2xl hover:text-gray-400"
+            size="2x"
+            className="transition-transform duration-300 transform hover:scale-150 hover:text-gray-400"
           />
         </a>
         <a
@@ -65,7 +70,8 @@ const Footer = ({ darkMode }) => {
         >
           <FontAwesomeIcon
             icon={faLinkedin}
-            className="text-2xl hover:text-gray-400"
+            size="2x"
+            className="transition-transform duration-300 transform hover:scale-150 hover:text-gray-400"
           />
         </a>
       </div>
