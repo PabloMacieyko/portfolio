@@ -69,7 +69,9 @@ const ContactCard = ({ language, darkMode }) => {
         darkMode ? "bg-gray-800 bg-opacity-90" : "bg-gray-100 bg-opacity-80"
       } p-6 rounded-lg w-full max-w-4xl`}
     >
-      <h3 className="text-2xl font-bold mb-4">{contactText[language]}</h3>
+      <h3 className="text-2xl font-bold mb-4 text-center">
+        {contactText[language]}
+      </h3>
       <form onSubmit={handleSubmit}>
         <div className="mb-4">
           <label className="block text-sm font-medium mb-2" htmlFor="name">
@@ -118,12 +120,12 @@ const ContactCard = ({ language, darkMode }) => {
         </div>
         <button
           type="submit"
-          className="bg-blue-500 text-white py-2 px-4 rounded-md hover:bg-blue-600"
+          className="bg-blue-500 text-white py-2 px-4 rounded-md hover:bg-blue-600 w-full"
         >
           {sendButtonText[language]}
         </button>
       </form>
-      {status && <p className="mt-4 text-sm">{status}</p>}
+      {status && <p className="mt-4 text-sm text-center">{status}</p>}
     </div>
   );
 };

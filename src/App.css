@@ -4,3 +4,11 @@
   background-size: cover;
   background-attachment: fixed;
 }
+
+
+/* Add this CSS to your global styles or inline */
+.icon-container:hover {
+  transform: scale(1.2);
+  color: #3b82f6; /* Change this to the color you want */
+  transition: transform 0.3s ease, color 0.3s ease;
+}
