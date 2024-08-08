@@ -6,6 +6,8 @@ const Header = ({ toggleLanguage, toggleDarkMode, language, darkMode }) => {
     ? translations[language].lightMode
     : translations[language].darkMode;
 
+    const lenguageButtonText = language === "es" ? "English" : "Español";
+
   return (
     <header
       className={`flex justify-between items-center p-4 ${
@@ -14,7 +16,7 @@ const Header = ({ toggleLanguage, toggleDarkMode, language, darkMode }) => {
     >
       <div>
         <button onClick={toggleLanguage} className="bg-blue-500 text-white px-4 py-2 rounded mr-4">
-          {language === "es" ? "Switch to English" : "Cambiar a Español"}
+          {lenguageButtonText}
         </button>
         <button onClick={toggleDarkMode} className="bg-gray-700 text-white px-4 py-2 rounded">
           {themeButtonText}
