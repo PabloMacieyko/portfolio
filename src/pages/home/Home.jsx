@@ -6,17 +6,16 @@ import translations from "../../components/translations/translations";
 import ContactCard from "../../components/contact/ContactCard";
 import projects from "../../components/projects/ProjectData";
 
-
 const Home = () => {
   const [language, setLanguage] = useState("es");
   const [darkMode, setDarkMode] = useState(false);
 
   const toggleLanguage = () => {
-    setLanguage(language === "es" ? "en" : "es");
+    setLanguage((prevLang) => (prevLang === "es" ? "en" : "es"));
   };
 
   const toggleDarkMode = () => {
-    setDarkMode(!darkMode);
+    setDarkMode((prevMode,) => !prevMode);
   };
 
   const t = translations[language];
@@ -24,7 +23,7 @@ const Home = () => {
   return (
     <div
       className={`${
-        darkMode ? "bg-gray-900 text-white" : "bg-white text-black"
+        darkMode ? "text-white" : "text-black"
       } min-h-screen flex flex-col`}
     >
       <Header
@@ -32,12 +31,9 @@ const Home = () => {
         toggleDarkMode={toggleDarkMode}
         language={language}
         darkMode={darkMode}
-        themeButtonText={t.themeButtonText}
       />
-      <main
-        className="p-8 min-h-screen bg-cover bg-center flex flex-col items-center"
-        style={{ backgroundImage: "url('/public/background.jpg')" }}
-      >
+
+      <main className="p-8 min-h-screen bg-cover bg-center flex flex-col items-center">
         <div
           className={`${
             darkMode ? "bg-gray-800 bg-opacity-90" : "bg-gray-100 bg-opacity-80"
