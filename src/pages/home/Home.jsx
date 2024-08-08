@@ -64,7 +64,7 @@ const Home = () => {
           <ContactCard language={language} darkMode={darkMode} />
         </div>
       </main>
-      <Footer />
+      <Footer darkMode={darkMode}/>
     </div>
   );
 };
