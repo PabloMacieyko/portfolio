@@ -6,7 +6,7 @@ import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 const Footer = () => {
   return (
     <footer className="p-4 mt-8">
-      <div className="flex justify-center space-x-6 mb-4">
+      <div className="flex justify-center space-x-4 mb-4">
         <a href="https://www.instagram.com/pablo.macieyko/" target="_blank" rel="noopener noreferrer">
           <FontAwesomeIcon icon={faInstagram} className="text-2xl hover:text-gray-400" />
         </a>
