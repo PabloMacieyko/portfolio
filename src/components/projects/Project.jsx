@@ -1,17 +1,21 @@
 import React from "react";
+import "./Project.css";
 
 const Project = ({ title, description, link, darkMode, buttonText }) => {
   return (
     <div
-      className={` p-4 mb-4 ${
-        darkMode
-          ? "bg-black-700 text-white bg-opacity-30"
-          : "bg-black-200 text-black bg-opacity-30"
+      className={`project-container ${
+        darkMode ? "project-container-dark" : "project-container-light"
       }`}
     >
-      <h3 className="text-lg font-bold">{title}</h3>
-      <p className="text-sm">{description}</p>
-      <a href={link} className="font-bold text-green-500 hover:text-blue-400" target="_blank" rel="noopener noreferrer">
+      <h3 className="project-title">{title}</h3>
+      <p className="project-description">{description}</p>
+      <a
+        href={link}
+        className="project-link"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
         {buttonText}
       </a>
     </div>
