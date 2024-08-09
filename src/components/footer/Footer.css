@@ -1,0 +1,27 @@
+.footer-container {
+    padding: 1rem;
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+  }
+  
+  .footer-container-dark {
+    background-color: rgba(31, 41, 55, 0.3);
+    color: white;
+  }
+  
+  .footer-container-light {
+    background-color: rgba(209, 213, 219, 0.3);
+    color: black;
+  }
+  
+  .footer-icon {
+    transition: transform 0.3s ease;
+  }
+  
+  .footer-icon:hover {
+    transform: scale(1.5);
+    color: rgba(156, 163, 175, 1);
+  }
+  

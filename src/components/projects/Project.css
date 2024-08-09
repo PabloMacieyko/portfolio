@@ -1,0 +1,33 @@
+.project-container {
+    padding: 1rem;
+    margin-bottom: 1rem;
+  }
+  
+  .project-container-dark {
+    background-color: rgba(0, 0, 0, 0.3);
+    color: white;
+  }
+  
+  .project-container-light {
+    background-color: rgba(0, 0, 0, 0.2);
+    color: black;
+  }
+  
+  .project-title {
+    font-size: 1.125rem;
+    font-weight: bold;
+  }
+  
+  .project-description {
+    font-size: 0.875rem;
+  }
+  
+  .project-link {
+    font-weight: bold;
+    color: #48bb78;
+    transition: color 0.3s ease;
+  }
+  
+  .project-link:hover {
+    color: #63b3ed;
+  }
