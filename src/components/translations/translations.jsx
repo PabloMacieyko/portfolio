@@ -1,7 +1,7 @@
 const translations = {
     es: {
       titlePortfolio: "Bienvenido a Mi Portafolio",
-      textPortfolio: "Te presento mis proyectos y habilidades!",
+      textPortfolio: "Te presento mis proyectos, habilidades y te cuento un poco sobre mi!",
       aboutMeTitle: "Sobre Mi",
       aboutMeText: "Soy Pablo, un apasionado programador en constante crecimiento. Estoy decidido a explorar y aprender en el vasto mundo del desarrollo de software. Mi enfoque va más allá del código: me encanta colaborar en equipo y enfrentar desafíos que me hagan evolucionar como profesional. Soy un firme creyente en la importancia del trabajo en equipo y el intercambio de conocimientos. Busco oportunidades para crecer y contribuir en proyectos emocionantes. Mi entusiasmo y dedicación son mis mejores herramientas. ¡Saludos!",
       viewProjectText: "Ver Proyecto",
@@ -27,7 +27,7 @@ const translations = {
     },
     en: {
       titlePortfolio: "Welcome to My Portfolio",
-      textPortfolio: "Here you'll find my projects and skills!",
+      textPortfolio: "Here you'll find my projects, skills and I'll tell you a little about me!",
       aboutMeTitle: "About Me",
       aboutMeText: "I'm Pablo, a passionate programmer on a constant growth journey. I'm determined to explore and learn in the vast world of software development. My focus goes beyond code: I love collaborating in teams and tackling challenges that help me evolve as a professional. I'm a firm believer in the importance of teamwork and knowledge sharing. I'm seeking opportunities to grow and contribute to exciting projects. My enthusiasm and dedication are my best tools. Greetings!",
       viewProjectText: "View Project",

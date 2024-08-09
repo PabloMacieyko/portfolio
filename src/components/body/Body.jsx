@@ -20,7 +20,7 @@ const Body = ({ t, language, darkMode }) => {
           </div>
 
           <div className="mb-8 w-full">
-            <h2 className="text-3xl font-bold mb-4">{t.projectsTitle}</h2>
+            <h2 id="projects" className="text-3xl font-bold mb-4">{t.projectsTitle}</h2>
 
             {projects.map((project, index) => (
               <Project

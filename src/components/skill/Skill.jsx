@@ -14,6 +14,7 @@ import {
 const Skill = ({ t, darkMode }) => {
   return (
     <div
+      id="skills"
       className={`${
         darkMode ? "bg-gray-800 bg-opacity-40" : "bg-gray-100 bg-opacity-40"
       } flex flex-col items-center justify-center p-8 mb-8 w-full max-w-4xl text-center rounded-lg`}
