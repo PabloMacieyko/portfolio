@@ -5,6 +5,8 @@ import translations from "../../components/translations/translations";
 import ContactCard from "../../components/contact/ContactCard";
 import Skill from "../../components/skill/Skill";
 import Body from "../../components/body/Body";
+import background2 from "../../../public/background2.mp4";
+import backgroundIMG from "../../../public/backgroundIMG.jpg";
 
 const Home = () => {
   const [language, setLanguage] = useState("es");
@@ -21,7 +23,27 @@ const Home = () => {
   const t = translations[language];
 
   return (
-      <div className={`${darkMode ? "text-white" : "text-black"} z-10 relative`}>
+    <div className="relative w-full h-full">
+      <picture>
+        <source src={background2} type="video/mp4" />
+        <img
+          src={backgroundIMG}
+          alt="Background"
+          className="fixed top-0 left-0 w-full h-full object-cover z-0"
+        />
+      </picture>
+      <video
+        autoPlay
+        loop
+        muted
+        className="fixed top-0 left-0 w-full h-full object-cover z-0"
+      >
+        <source src={background2} type="video/mp4" />
+        Tu navegador no admite videos HTML5.
+      </video>
+      <div
+        className={`${darkMode ? "text-white" : "text-black"} z-10 relative`}
+      >
         <Header
           toggleLanguage={toggleLanguage}
           toggleDarkMode={toggleDarkMode}
@@ -36,6 +58,7 @@ const Home = () => {
 
         <Footer darkMode={darkMode} />
       </div>
+    </div>
   );
 };
 
