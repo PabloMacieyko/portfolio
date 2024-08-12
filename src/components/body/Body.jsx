@@ -8,7 +8,7 @@ const Body = ({ t, language, darkMode }) => {
       <main className="flex flex-col items-center justify-center min-h-screen p-8 bg-cover bg-center text-center">
         <div
           className={`${
-            darkMode ? "bg-gray-800 bg-opacity-30" : "bg-gray-100 bg-opacity-30"
+            darkMode ? "bg-gray-800 bg-opacity-80" : "bg-gray-100 bg-opacity-40"
           } p-8 rounded-lg w-full max-w-4xl`}
         >
           <h1 className="text-4xl font-bold mb-4 ">{t.titlePortfolio}</h1>
@@ -20,7 +20,9 @@ const Body = ({ t, language, darkMode }) => {
           </div>
 
           <div className="mb-8 w-full">
-            <h2 id="projects" className="text-3xl font-bold mb-4">{t.projectsTitle}</h2>
+            <h2 id="projects" className="text-3xl font-bold mb-4">
+              {t.projectsTitle}
+            </h2>
 
             {projects.map((project, index) => (
               <Project

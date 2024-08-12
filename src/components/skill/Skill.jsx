@@ -1,5 +1,5 @@
 import React from "react";
-import { FaReact } from 'react-icons/fa';
+import { FaReact } from "react-icons/fa";
 import {
   SiTailwindcss,
   SiMongodb,
@@ -10,90 +10,73 @@ import {
   SiCss3,
   SiFirebase,
 } from "react-icons/si";
+import "./Skill.css"; // Importa el archivo CSS
 
 const Skill = ({ t, darkMode }) => {
   return (
     <div
       id="skills"
-      className={`${
-        darkMode ? "bg-gray-800 bg-opacity-40" : "bg-gray-100 bg-opacity-40"
-      } flex flex-col items-center justify-center p-8 mb-8 w-full max-w-4xl text-center rounded-lg`}
+      className={`skill-container ${
+        darkMode ? "skill-container-dark" : "skill-container-light"
+      }`}
     >
-      <h2 className="text-3xl font-bold mb-8">{t.skillsTitle}</h2>
+      <h2 className="skill-title">{t.skillsTitle}</h2>
 
       {/* Frontend Skills */}
-      <div className="mb-12 w-full">
-        <h3 className="text-xl font-semibold mb-6">Frontend</h3>
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-6">
-          <div className="flex flex-col items-center">
-            <FaReact
-              size={50}
-              className="transition-transform duration-300 transform hover:scale-150 hover:text-blue-400"
-            />
-            <p className="mt-2">React</p>
+      <div className="skill-section">
+        <h3 className="skill-subtitle">Frontend</h3>
+        <div className="skill-grid skill-grid-cols-frontend skill-grid-cols-frontend-sm skill-grid-cols-frontend-md">
+          <div className="skill-icon-container">
+            <FaReact size={50} className="skill-icon hover:text-blue-400" />
+            <p className="skill-text">React</p>
           </div>
-          <div className="flex flex-col items-center">
+          <div className="skill-icon-container">
             <SiJavascript
               size={50}
-              className="transition-transform duration-300 transform hover:scale-150 hover:text-yellow-300"
+              className="skill-icon hover:text-yellow-300"
             />
-            <p className="mt-2">JavaScript</p>
+            <p className="skill-text">JavaScript</p>
           </div>
-          <div className="flex flex-col items-center">
-            <SiBootstrap
-              size={50}
-              className="transition-transform duration-300 transform hover:scale-150 hover:text-purple-500"
-            />
-            <p className="mt-2">Bootstrap</p>
+          <div className="skill-icon-container">
+            <SiBootstrap size={50} className="skill-icon hover:text-purple-500" />
+            <p className="skill-text">Bootstrap</p>
           </div>
-          <div className="flex flex-col items-center">
-            <SiHtml5
-              size={50}
-              className="transition-transform duration-300 transform hover:scale-150 hover:text-orange-500"
-            />
-            <p className="mt-2">HTML</p>
+          <div className="skill-icon-container">
+            <SiHtml5 size={50} className="skill-icon hover:text-orange-500" />
+            <p className="skill-text">HTML</p>
           </div>
-          <div className="flex flex-col items-center">
-            <SiCss3
-              size={50}
-              className="transition-transform duration-300 transform hover:scale-150 hover:text-blue-500"
-            />
-            <p className="mt-2">CSS</p>
+          <div className="skill-icon-container">
+            <SiCss3 size={50} className="skill-icon hover:text-blue-500" />
+            <p className="skill-text">CSS</p>
           </div>
-          <div className="flex flex-col items-center">
+          <div className="skill-icon-container">
             <SiTailwindcss
               size={50}
-              className="transition-transform duration-300 transform hover:scale-150 hover:text-sky-500"
+              className="skill-icon hover:text-sky-500"
             />
-            <p className="mt-2">Tailwind</p>
+            <p className="skill-text">Tailwind</p>
           </div>
         </div>
       </div>
 
       {/* Backend Skills */}
-      <div className="w-full">
-        <h3 className="text-xl font-semibold mb-6">Backend</h3>
-        <div className="grid grid-cols-2 sm:grid-cols-3 gap-6">
-          <div className="flex flex-col items-center">
-            <SiDotnet
-              size={50}
-              className="transition-transform duration-300 transform hover:scale-150 hover:text-purple-500"
-            />
-            <p className="mt-2">.NET</p>
+      <div className="skill-section">
+        <h3 className="skill-subtitle">Backend</h3>
+        <div className="skill-grid skill-grid-cols-backend skill-grid-cols-backend-sm">
+          <div className="skill-icon-container">
+            <SiDotnet size={50} className="skill-icon hover:text-purple-500" />
+            <p className="skill-text">.NET</p>
           </div>
-          <div className="flex flex-col items-center">
-            <SiMongodb
-              size={50}
-              className="transition-transform duration-300 transform hover:scale-150 hover:text-green-500"
-            />
-            <p className="mt-2">MongoDB</p>
+          <div className="skill-icon-container">
+            <SiMongodb size={50} className="skill-icon hover:text-green-500" />
+            <p className="skill-text">MongoDB</p>
           </div>
-          <div className="flex flex-col items-center">
+          <div className="skill-icon-container">
             <SiFirebase
               size={50}
-              className="transition-transform duration-300 transform hover:scale-150 hover:text-yellow-500"
+              className="skill-icon hover:text-yellow-500"
             />
-            <p className="mt-2">Firebase</p>
+            <p className="skill-text">Firebase</p>
           </div>
         </div>
       </div>

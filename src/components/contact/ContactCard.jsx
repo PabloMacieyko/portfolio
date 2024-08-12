@@ -45,7 +45,7 @@ const ContactCard = ({ language, darkMode }) => {
   return (
     <div
       className={`${
-        darkMode ? "bg-gray-800 bg-opacity-30" : "bg-gray-100 bg-opacity-30"
+        darkMode ? "bg-gray-800 bg-opacity-80" : "bg-gray-100 bg-opacity-40"
       } p-6 rounded-lg w-full max-w-4xl`}
     >
       <h3 className="text-2xl font-bold mb-4 text-center">

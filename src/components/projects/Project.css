@@ -4,12 +4,12 @@
   }
   
   .project-container-dark {
-    background-color: rgba(0, 0, 0, 0.3);
+    background-color: rgba(31, 41, 55, 0.6);
     color: white;
   }
   
   .project-container-light {
-    background-color: rgba(0, 0, 0, 0.2);
+    background-color: rgba(209, 213, 219, 0.2);
     color: black;
   }
   
