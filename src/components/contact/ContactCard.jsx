@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import emailjs from "emailjs-com";
 import translations from "../translations/translations";
+import "./ContactCard.css";
 
 const ContactCard = ({ language, darkMode }) => {
   const [form, setForm] = useState({ name: "", email: "", message: "" });
@@ -33,7 +34,7 @@ const ContactCard = ({ language, darkMode }) => {
         setStatus(t.success);
         setForm({ name: "", email: "", message: "" });
       } else {
-        setStatus(statusMessages[language].failure);
+        setStatus(t.failure);
       }
     } catch (error) {
       console.error("Error sending email:", error);
@@ -41,19 +42,16 @@ const ContactCard = ({ language, darkMode }) => {
     }
   };
 
-
   return (
     <div
-      className={`${
-        darkMode ? "bg-gray-800 bg-opacity-80" : "bg-gray-100 bg-opacity-40"
-      } p-6 rounded-lg w-full max-w-4xl`}
+      className={`contact-card-container ${
+        darkMode ? "contact-card-container-dark" : "contact-card-container-light"
+      }`}
     >
-      <h3 className="text-2xl font-bold mb-4 text-center">
-        {t.contactText}
-      </h3>
+      <h3 className="contact-card-title">{t.contactText}</h3>
       <form onSubmit={handleSubmit}>
         <div className="mb-4">
-          <label className="block text-sm font-medium mb-2" htmlFor="name">
+          <label className="contact-card-label" htmlFor="name">
             {t.nameLabel}
           </label>
           <input
@@ -62,13 +60,15 @@ const ContactCard = ({ language, darkMode }) => {
             name="name"
             value={form.name}
             onChange={handleChange}
-            className={`border p-2 w-full rounded-md ${
-              darkMode ? "bg-gray-700 text-white bg-opacity-10" : "bg-white text-black bg-opacity-10"
+            className={`contact-card-input ${
+              darkMode
+                ? "contact-card-input-dark"
+                : "contact-card-input-light"
             }`}
           />
         </div>
         <div className="mb-4">
-          <label className="block text-sm font-medium mb-2" htmlFor="email">
+          <label className="contact-card-label" htmlFor="email">
             {t.emailLabel}
           </label>
           <input
@@ -77,13 +77,15 @@ const ContactCard = ({ language, darkMode }) => {
             name="email"
             value={form.email}
             onChange={handleChange}
-            className={`border p-2 w-full rounded-md ${
-              darkMode ? "bg-gray-700 text-white bg-opacity-10" : "bg-white text-black bg-opacity-10"
+            className={`contact-card-input ${
+              darkMode
+                ? "contact-card-input-dark"
+                : "contact-card-input-light"
             }`}
           />
         </div>
         <div className="mb-4">
-          <label className="block text-sm font-medium mb-2" htmlFor="message">
+          <label className="contact-card-label" htmlFor="message">
             {t.messageLabel}
           </label>
           <textarea
@@ -91,20 +93,22 @@ const ContactCard = ({ language, darkMode }) => {
             name="message"
             value={form.message}
             onChange={handleChange}
-            className={`border p-2 w-full rounded-md ${
-              darkMode ? "bg-gray-700 text-white bg-opacity-10" : "bg-white text-black bg-opacity-10"
+            className={`contact-card-textarea ${
+              darkMode
+                ? "contact-card-textarea-dark"
+                : "contact-card-textarea-light"
             }`}
             rows="4"
           />
         </div>
         <button
           type="submit"
-          className="bg-blue-500 text-white py-2 px-4 rounded-md hover:bg-blue-600 w-full bg-opacity-30"
+          className="contact-card-button"
         >
           {t.sendButtonText}
         </button>
       </form>
-      {status && <p className="mt-4 text-sm text-center">{status}</p>}
+      {status && <p className="contact-card-status">{status}</p>}
     </div>
   );
 };

@@ -1,69 +1,63 @@
 .contact-card-container {
-    padding: 1.5rem;
-    border-radius: 0.5rem;
-    width: 100%;
-    max-width: 40rem;
-  }
-  
-  .contact-card-container-dark {
-    background-color: rgba(17, 24, 39, 0.8);
-    color: white;
-  }
-  
-  .contact-card-container-dark{
-    background-color: rgba(255, 255, 255, 0.4);
-    color: black;
-  }
-  
-  .contact-card-title {
-    font-size: 2rem;
-    font-weight: bold;
-    margin-bottom: 1rem;
-    text-align: center;
-  }
-  
-  .contact-card-label {
-    display: block;
-    font-size: 0.875rem;
-    font-weight: medium;
-    margin-bottom: 0.5rem;
-  }
-  
-  .contact-card-input,
-  .contact-card-textarea {
-    border: 1px solid #e5e7eb;
-    padding: 0.5rem;
-    width: 100%;
-    border-radius: 0.375rem;
-  }
-  
-  .contact-card-input-dark,
-  .contact-card-textarea-dark {
-    background-color: rgba(31, 41, 55, 0.1);
-    color: white;
-  }
-  
-  .contact-card-input-light,
-  .contact-card-textarea-light {
-    background-color: rgba(255, 255, 255, 0.1);
-    color: black;
-  }
-  
-  .contact-card-button {
-    background-color: rgba(59, 130, 246, 0.3);
-    color: white;
-    padding: 0.5rem 1rem;
-    border-radius: 0.375rem;
-    width: 100%;
-  }
-  
-  .contact-card-button:hover {
-    background-color: rgba(59, 130, 246, 0.5);
-  }
-  
-  .contact-card-status {
-    margin-top: 1rem;
-    font-size: 0.875rem;
-    text-align: center;
-  }
-  
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  width: 100%;
+  max-width: 40rem;
+}
+
+.contact-card-container-dark {
+  background-color: rgba(31, 41, 55, 0.4);
+}
+
+.contact-card-container-light {
+  background-color: rgba(209, 213, 219, 0.4);
+}
+
+.contact-card-title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.contact-card-label {
+  display: block;
+  font-size: 0.875rem;
+  font-weight: medium;
+  margin-bottom: 0.5rem;
+}
+
+.contact-card-input,
+.contact-card-textarea {
+  padding: 0.5rem;
+  width: 100%;
+  border-radius: 0.375rem;
+  border: 1px solid #d1d5db;
+}
+
+.contact-card-input-dark,
+.contact-card-textarea-dark {
+  background-color: rgba(31, 41, 55, 0.1);
+}
+
+.contact-card-input-light,
+.contact-card-textarea-light {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.contact-card-button {
+  background-color: rgba(59, 130, 246, 0.3);
+  padding: 0.5rem 1rem;
+  border-radius: 0.375rem;
+  width: 100%;
+}
+
+.contact-card-button:hover {
+  background-color: rgba(59, 130, 246, 0.5);
+}
+
+.contact-card-status {
+  margin-top: 1rem;
+  font-size: 0.875rem;
+  text-align: center;
+}
