@@ -7,6 +7,7 @@ import Skill from "../../components/skill/Skill";
 import Body from "../../components/body/Body";
 import background2 from "../../../public/background2.mp4";
 import backgroundIMG from "../../../public/backgroundIMG.jpg";
+import "./Home.css";
 
 const Home = () => {
   const [language, setLanguage] = useState("es");
@@ -23,39 +24,36 @@ const Home = () => {
   const t = translations[language];
 
   return (
-    <div className="relative w-full h-full">
+    <div className="home-container">
       <picture>
         <source src={background2} type="video/mp4" />
         <img
           src={backgroundIMG}
           alt="Background"
-          className="fixed top-0 left-0 w-full h-full object-cover z-0"
+          className="background-image"
         />
       </picture>
       <video
         autoPlay
         loop
         muted
-        className="fixed top-0 left-0 w-full h-full object-cover z-0"
+        className="background-video"
       >
         <source src={background2} type="video/mp4" />
         Tu navegador no admite videos HTML5.
       </video>
-      <div
-        className={`${darkMode ? "text-white" : "text-black"} z-10 relative`}
-      >
+      <div className={`content ${darkMode ? "text-white" : "text-black"}`}>
         <Header
           toggleLanguage={toggleLanguage}
           toggleDarkMode={toggleDarkMode}
           language={language}
           darkMode={darkMode}
         />
-        <div className="flex flex-col items-center justify-center min-h-screen p-8">
+        <div className="main-content">
           <Body t={t} language={language} darkMode={darkMode} />
           <Skill t={t} darkMode={darkMode} />
           <ContactCard language={language} darkMode={darkMode} />
         </div>
-
         <Footer darkMode={darkMode} />
       </div>
     </div>
