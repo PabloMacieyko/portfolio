@@ -2,7 +2,7 @@ import React from "react";
 import Project from "../../components/projects/Project";
 import projects from "../../components/projects/ProjectData";
 import "./Body.css";
-import portfolio from "../../../public/portfolio.jpg";
+import portfolio from "/portfolio.jpg";
 
 const Body = ({ t, language, darkMode }) => {
   return (
