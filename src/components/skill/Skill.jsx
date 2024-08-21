@@ -25,7 +25,7 @@ const Skill = ({ t, darkMode }) => {
       {/* Frontend Skills */}
       <div className="skill-section">
         <h3 className="skill-subtitle">Frontend</h3>
-        <div className="skill-grid skill-grid-cols-frontend skill-grid-cols-frontend-sm skill-grid-cols-frontend-md">
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6">
           <div className="skill-icon-container">
             <FaReact size={50} className="skill-icon hover:text-blue-400" />
             <p className="skill-text">React</p>
@@ -62,7 +62,7 @@ const Skill = ({ t, darkMode }) => {
       {/* Backend Skills */}
       <div className="skill-section">
         <h3 className="skill-subtitle">Backend</h3>
-        <div className="skill-grid skill-grid-cols-backend skill-grid-cols-backend-sm">
+        <div className="grid grid-cols-2 sm:grid-cols-3 gap-6">
           <div className="skill-icon-container">
             <SiDotnet size={50} className="skill-icon hover:text-purple-500" />
             <p className="skill-text">.NET</p>

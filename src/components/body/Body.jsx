@@ -15,9 +15,18 @@ const Body = ({ t, language, darkMode }) => {
           <h1 className="body-title">{t.titlePortfolio}</h1>
           <p className="body-text">{t.textPortfolio}</p>
 
-          <div className="body-section">
-            <h2 className="body-section-title">{t.aboutMeTitle}</h2>
-            <p>{t.aboutMeText}</p>
+          <div className="body-section flex flex-col lg:flex-row justify-between items-center mt-10">
+            <div className="lg:w-1/2 text-left lg:mr-8">
+              <h2 className="body-section-title">{t.aboutMeTitle}</h2>
+              <p>{t.aboutMeText}</p>
+            </div>
+            <div className="lg:w-1/2 flex justify-center items-center mt-6 lg:mt-0">
+              <img
+                src="/public/Portfolio.jpg"
+                alt="Pablo Ivan Macieyko"
+                className="rounded-full max-w-full h-auto lg:w-60 lg:h-60 border-4 border-black object-cover"
+              />
+            </div>
           </div>
 
           <div className="body-section">
