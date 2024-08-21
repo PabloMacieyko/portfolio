@@ -22,7 +22,7 @@ const Body = ({ t, language, darkMode }) => {
             </div>
             <div className="lg:w-1/2 flex justify-center items-center mt-6 lg:mt-0">
               <img
-                src="/public/portfolio.jpg"
+                src="../../../public/portfolio.jpg"
                 alt="Pablo Ivan Macieyko"
                 className="rounded-full max-w-full h-auto lg:w-60 lg:h-60 border-4 border-black object-cover"
               />
