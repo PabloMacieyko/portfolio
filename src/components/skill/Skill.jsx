@@ -68,10 +68,6 @@ const Skill = ({ t, darkMode }) => {
             <p className="skill-text">.NET</p>
           </div>
           <div className="skill-icon-container">
-            <SiMongodb size={50} className="skill-icon hover:text-green-500" />
-            <p className="skill-text">MongoDB</p>
-          </div>
-          <div className="skill-icon-container">
             <SiFirebase
               size={50}
               className="skill-icon hover:text-yellow-500"
